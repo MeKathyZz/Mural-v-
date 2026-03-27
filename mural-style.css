@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c10;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.convite-box {
+    background: rgba(15, 15, 20, 0.9);
+    border: 2px solid #DAA520;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 900px;
+    width: 95%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.3);
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #DAA520;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+}
+
+.subtitulo {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.subtitulo-total {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    font-family: 'Georgia', serif;
+}
+
+.ouro-brilhante {
+    color: #DAA520;
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
+}
+
+.alerta-ia {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #DAA520;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.alerta-ia p {
+    color: #e0e0e0;
+    font-size: 15px;
+    margin: 0;
+}
+
+.bloco-input {
+    text-align: left;
+}
+
+label {
+    color: #DAA520;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(218, 165, 32, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #DAA520;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+button {
+    background: #DAA520;
+    color: #0b0c10;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+button:hover {
+    background: #f1c40f;
+    transform: scale(1.02);
+}
+
+button:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.btn-flutuante-recarregar {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    z-index: 1000 !important;
+
+    background: transparent !important;
+    border: none !important;
+    color: #DAA520 !important;
+
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 0 !important;
+
+    margin: 0 !important;
+    padding: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    outline: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-flutuante-recarregar:hover {
+    background: rgba(218, 165, 32, 0.1) !important;
+    transform: scale(1.05) !important;
+}
+
+.icone-girando {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    animation: girarInfinito 2s linear infinite;
+}
+
+@keyframes girarInfinito {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cartinha {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(218, 165, 32, 0.3);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cartinha-topo {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.2s;
+}
+
+.cartinha-topo:hover {
+    background: rgba(218, 165, 32, 0.1);
+}
+
+.cartinha-nome {
+    color: #DAA520;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0 0 15px 0;
+}
+
+.cartinha-texto {
+    color: #ffffff;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.setinha {
+    color: #DAA520;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.cartinha-conteudo {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    padding: 0 25px;
+}
+
+.cartinha.aberta {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #DAA520;
+}
+
+.cartinha.aberta .cartinha-conteudo {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+@keyframes subirSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes estrelaRoda {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.estrela-girando {
+    display: inline-block;
+    animation: estrelaRoda 4s linear infinite;
+}
+
+@media (max-width: 600px) {
+
+    input,
+    textarea {
+        font-size: 16px !important;
+    }
+}

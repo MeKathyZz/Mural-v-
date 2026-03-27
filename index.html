@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural da Maria Amélia - Enviar Mensagem</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="mural-style.css">
+</head>
+
+<body>
+
+    <canvas id="starfield"></canvas>
+
+    <div class="wrapper">
+        <div class="convite-box aberto">
+
+            <p class="titulo ouro-brilhante">
+                <span class="estrela-girando">✨</span>
+                MURAL DE HOMENAGENS
+                <span class="estrela-girando">✨</span>
+            </p>
+
+            <p class="subtitulo-total">
+    <span class="ouro-brilhante">Maria Amélia</span> tem um total de <span id="contador-mensagens" class="ouro-brilhante">0</span> mensagens!
+</p>
+
+            <div class="alerta-ia">
+                <p>🎙️ <strong>Dica de amor:</strong> O texto será lido por Inteligência Artificial no dia da festa.
+                    Para o áudio ficar perfeito, escreva as palavras completas (use "você" em vez de "vc").</p>
+            </div>
+
+            <div class="bloco-input">
+                <label for="nome">Seu nome e sobrenome:</label>
+                <input type="text" id="nome" placeholder="Ex: João Silva" autocapitalize="words">
+
+                <label for="mensagem">Sua mensagem:</label>
+                <textarea id="mensagem" rows="8" placeholder="Escreva aqui sua homenagem com carinho..."></textarea>
+
+                <button id="btn-enviar" onclick="enviarParaMural()">Enviar para o Mural ✨</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="stars.js"></script>
+    <script src="enviar-script.js"></script>
+</body>
+
+</html>
